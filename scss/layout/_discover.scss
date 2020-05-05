@@ -1,0 +1,48 @@
+.discover {
+    display: flex;
+    max-width: 1294px;
+    margin: 130px auto 0 auto;
+    padding: 25px;
+    box-shadow: 18.7px 24.8px 43px 0 rgba(0, 0, 0, 0.17);
+
+    &__description {        
+        flex: 0 1 47%;
+        padding: 38px 45px 32px 28px;
+
+        h2 {
+            @extend %h2-standart-header;
+            font-size: 29.2px;
+            letter-spacing: 0.059931em;
+            color: $greyish-brown;
+        }
+        h3 {
+            @extend %h3-standart-header;
+            margin-top: 4px;
+            font-size: 41.7px;
+        }
+        p {           
+            margin: 30px 0 50px 0;
+            font-size: 20.8px;
+            color: $greyish-brown;
+            line-height: 1.6;            
+        }
+    }    
+}
+
+.dotts-pages {
+    word-spacing: 0.470588em;
+
+    span {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        font-size: 17px;
+        background-color: $white-two;
+        border-radius: 50%;
+        cursor: pointer; 
+        
+        &.active {
+            background-color: $butterscotch;
+        }
+    }
+}

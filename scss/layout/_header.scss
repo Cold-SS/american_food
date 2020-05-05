@@ -1,0 +1,141 @@
+.header {    
+    padding: 50px 55px 80px 55px;
+    background-image: url('../img/bg/header.png');
+
+    &__top-block {
+        display: flex;
+        justify-content: space-between;        
+
+        &__logo {  
+            a {
+                display: flex;
+                font-size: 42px;
+                align-items: center;
+            }
+            img {               
+                height: 1.380952em;
+                width: 1.380952em;
+            }
+            h1 {    
+                margin-left: 0.523809em;
+                padding-top: 0.285714em;            
+                font-family: $bebas, serif;                
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1;                               
+            }
+        }
+
+        &__contact {
+            display: flex;
+            align-self: flex-start; 
+            align-items: center;           
+
+            img {
+                height: 1.976048em;
+                width: auto;
+            }
+            a {
+                margin-left: 0.598802em;
+                font-family: $monts, serif;
+                font-weight: 700;                
+            }
+        }
+    }
+    &__navigation {
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            display: flex;
+            flex: 0 1 478px;
+            justify-content: space-between;
+        }     
+        
+        a {            
+            font-family: $bebas, serif;
+            font-size: 20.8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;  
+            border-bottom: 2px solid transparent;
+            
+            @media (hover: hover) {
+                transition: all 0.6s; 
+
+                &:hover {
+                    border-bottom: 2px solid $army-green;
+                }
+            }
+        }
+    }
+    &__main-promo {
+        display: flex;
+        justify-content: space-between;
+
+        &__headings {
+            p {
+                display: inline-block;
+                margin-top: 153px;
+                padding: 0.423728em 0.847457em;
+                font-family: $bebas, serif;
+                font-size: 23.6px;
+                text-transform: uppercase;
+                border: 2px dashed transparent;  
+                border-image: url(../img/bg/header-border.png) 2 round;                         
+            }
+            h2 {
+                @extend %main-promo-headings;
+                margin-top: 16px;                
+                font-size: 114.5px;
+            }
+            h3 {
+                @extend %main-promo-headings;
+                margin-top: 8px;
+                font-size: 56.5px;
+            }
+        }
+        &__image {
+            position: relative;
+            margin: 78px;            
+        }
+        &__sticker {            
+            position: absolute;            
+            width: 5.704918em;
+            height: 5.704918em;
+            padding: 0.360655em;
+            left: 0;
+            bottom: 0;
+            font-size: 30.5px;
+            border-radius: 50%; 
+            background-color: $brick;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 2px dashed $white;
+            }
+
+            p {           
+                padding-left: 0.4em;                                      
+                font-family: $bebas, serif;
+                font-weight: 700;                
+                color: $white;                
+
+                span:first-child {
+                    font-size: 2.295082em;                    
+                }
+                span:last-child {
+                    display: block;
+                    text-transform: uppercase;                    
+                    letter-spacing: 0.4em;
+                }
+            }
+        }
+    }
+}
+

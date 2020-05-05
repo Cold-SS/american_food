@@ -1,0 +1,94 @@
+.footer {
+    max-width: 1326px;
+    margin: 0 auto;
+    margin-top: -113px;
+    padding: 84px 30px 22px 43px;
+    color: $white;
+    background: url(../img/bg/footer.jpg) 0 0 / cover no-repeat;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        .logoImg {
+            width: 90px;
+        }
+
+        .logoHeader {
+            margin-left: 35px;
+            padding-top: 0.28125em;
+            font-family: $bebas, serif;
+            font-weight: 700;            
+            font-size: 64px;
+            text-transform: uppercase;
+        }        
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+        .info-descr {
+            flex: 0 1 512px;
+            margin-top: 45px;
+            line-height: 1.5;
+        }
+
+        &__address {
+            padding: 64px 94px 0 20px;                  
+
+            %address-link {
+                display: block;   
+                padding: 0.341346em 0 0.341346em 3.125em;             
+                font-family: $bebas, serif;
+                font-size: 20.8px;
+                font-weight: 700;                
+            }
+            
+            .address {
+                @extend %address-link;
+                background: url(../img/icn/footer-location.png) 0 50%  no-repeat;
+            }
+
+            .email {
+                margin-top: 10px;
+                @extend %address-link;
+                background: url(../img/icn/footer-email.png) 0 50%  no-repeat;
+            }
+        }
+    }
+    &__bottom-block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 160px;
+
+        .coopyright {
+            font-family: $bebas ,serif;
+            text-transform: uppercase;
+        }
+
+        &__social {
+            .icon-wrapper {
+                display: inline-block;
+                margin-left: 8px;
+            }
+            .icon-link {
+                display: block;
+                height: 1.736526em;
+                width: 1.736526em;
+                text-align: center;
+                line-height: 1.736526em;
+                background-color: $white;
+                color: black;
+                border-radius: 50%;
+                transition: transform 0.5s;
+
+                @media (hover: hover) {
+                    &:hover {
+                        transform: rotate(360deg);                        
+                    }
+                }
+            }
+        }
+    }
+}

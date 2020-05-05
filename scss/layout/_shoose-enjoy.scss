@@ -1,0 +1,72 @@
+.shoose-enjoy {
+    margin-top: 70px;    
+    text-align: center;
+    
+    & > h2 {
+        @extend %h2-standart-header;
+        font-size: 25px;
+        display: inline-block;
+        padding: 14px 22px 12px 22px;       
+        background-color: $butterscotch;
+    }
+
+    & > h3 {
+        @extend %h3-standart-header;
+        font-size: 50px;
+        margin-top: 40px;        
+    }
+
+    & > p {        
+        margin-top: 20px;
+        padding: 0 190px;
+        line-height: 1.75;
+    }
+
+    &__burgers {        
+        display: flex;
+        justify-content: space-between;
+        margin: 65px 26px 0 26px;
+
+        &__card {   
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+
+            &:nth-child(even) {
+                margin: 0 20px;
+            }
+
+            h2 {
+                margin-top: 15px;
+                font-family: $bebas, serif;
+                font-size: 37.5px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            p {                
+                max-width: 332px;
+                margin-top: 12px;
+                line-height: 1.25;
+            }
+            button {
+                @extend %standart-button;
+                margin-top: 36px; 
+                cursor: pointer; 
+                transition: background-color 0.3s,                            
+                            transform 0s;              
+
+                @media (hover: hover) {
+                    &:hover {
+                        background-color: #5c0a0a;                        
+                    }
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}
+

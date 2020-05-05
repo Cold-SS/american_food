@@ -1,0 +1,66 @@
+.reservation {
+    padding: 132px 20px 290px 20px;
+    text-align: center;
+    background-image: url(../img/bg/reservation-left.png), url(../img/bg/reservation-right.png);
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 100%;
+
+    &>h2 {
+        @extend %h2-standart-header;
+        font-size: 29.2px;
+        letter-spacing: 0.059931em;
+    }
+
+    &>h3 {
+        @extend %h3-standart-header;
+        margin-top: 15px;
+        font-size: 50px;
+        letter-spacing: 0.06em;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 784px;
+        margin: 85px auto 0 auto;       
+
+        %form-element {
+            flex: 0 1 48.341836%;
+            border-radius: 5px;
+            font-size: 20.8px;
+            text-transform: uppercase;
+        }        
+        
+        input {
+            @extend %form-element;            
+            padding: 22px;
+            font-family: $bebas, serif;           
+            color: $greyish-brown;
+            border: solid 1px $pinkish-grey;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 27px;
+            }
+        }        
+
+        button {
+            @extend %form-element;
+            font-family: $slab, serif;
+            background-color: $brick;
+            color: $white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: #5c0a0a;                        
+                }
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}

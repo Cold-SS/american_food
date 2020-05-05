@@ -1,0 +1,36 @@
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+%main-promo-headings {
+    font-family: $slab, serif;
+    text-transform: uppercase;
+    text-shadow: 3.9px 4.5px 0 $pale-peach;
+}
+
+%try-it-today-heading {
+    font-family: $bebas, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+}
+
+%standart-button {
+    padding: 1.3em 2.27em 1.1em 2.27em;
+    font-family: $slab, serif;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $brick;
+}
+
+%h2-standart-header {
+    font-family: $bebas, serif;    
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+%h3-standart-header {
+    font-family: $slab, serif;    
+    text-transform: uppercase;
+}
