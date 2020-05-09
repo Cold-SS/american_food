@@ -1,6 +1,6 @@
 .header {    
     padding: 50px 55px 80px 55px;
-    background-image: url('../img/bg/header.png');
+    background-image: url('../img/bg/header.png');    
 
     @media (max-width: 600px) {
         padding: 30px;       
@@ -110,7 +110,9 @@
         }
 
         &.active {
-            left: 0;
+            @media (max-width: 600px) {
+                left: 0;
+            }
         }
 
         ul {
@@ -158,6 +160,10 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 750px) {
+            flex-wrap: wrap-reverse;
+        }
+
         &__headings {
             p {
                 display: inline-block;
@@ -167,24 +173,102 @@
                 font-size: 23.6px;
                 text-transform: uppercase;
                 border: 2px dashed transparent;  
-                border-image: url(../img/bg/header-border.png) 2 round;               
+                border-image: url(../img/bg/header-border.png) 2 round;  
+                
+                @media (max-width: 1300px) {
+                    margin-top: 110px;
+                }
+
+                @media (max-width: 1200px) {
+                    margin-top: 80px;
+                    font-size: 20px;
+                }
+
+                @media (max-width: 950px) {
+                    font-size: 15px;
+                }  
+                
+                @media (max-width: 750px) {
+                    margin-top: 60px;
+                    font-size: 20px;
+                }
+
+                @media (max-width: 520px) {
+                    font-size: 15px;
+                }
             }
             
             h2 {
                 @extend %main-promo-headings;
                 margin-top: 16px;                
-                font-size: 114.5px;                
+                font-size: 114.5px;   
+                
+                @media (max-width: 1200px) {
+                    font-size: 90px;
+                }
+
+                @media (max-width: 950px) {
+                    font-size: 75px;
+                }
+
+                @media (max-width: 750px) {
+                    font-size: 95px;
+                }
+
+                @media (max-width: 520px) {
+                    font-size: 70px;
+                }
+
+                @media (max-width: 370px) {
+                    font-size: 55px;
+                }
             }
 
             h3 {
                 @extend %main-promo-headings;
                 margin-top: 8px;
                 font-size: 56.5px;
+
+                @media (max-width: 950px) {
+                    font-size: 40px;
+                }
+
+                @media (max-width: 750px) {
+                    font-size: 56px;
+                }
+
+                @media (max-width: 600px) {
+                    margin-bottom: 30px;
+                }
+
+                @media (max-width: 520px) {
+                    font-size: 40px;
+                }
             }
         }
         &__image {
             position: relative;
-            margin: 78px;            
+            margin: 78px;
+            margin-bottom: 0;
+            
+            @media (max-width: 1200px) {
+                margin: 50px 0 0 50px;
+            }
+
+            @media (max-width: 750px) {
+                margin: 50px 0 0 0;
+            }
+            
+            img {
+                @media (max-width: 750px) {
+                    width: 75%;
+                    transform: scaleX(-1);
+                }
+
+                @media (max-width: 600px) {                    
+                    width: 90%;                    
+                }
+            }
         }
         &__sticker {            
             position: absolute;            
@@ -196,6 +280,32 @@
             font-size: 30.5px;
             border-radius: 50%; 
             background-color: $brick;  
+
+            @media (max-width: 1300px) {
+                font-size: 25px;
+            }           
+            
+            @media (max-width: 1050px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 880px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 750px) {
+                left: auto;
+                right: 35%;
+                font-size: 20px;
+            }
+
+            @media (max-width: 600px) {
+                right: 20%;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 16px;
+            }
 
             div {
                 display: flex;
