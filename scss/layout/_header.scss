@@ -166,13 +166,16 @@
 
         &__headings {
             p {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
+                height: 2.118644em;
                 margin-top: 153px;
-                padding: 0.423728em 0.847457em;
+                padding: 0 0.847457em;                
                 font-family: $bebas, serif;
-                font-size: 23.6px;
-                text-transform: uppercase;
-                border: 2px dashed transparent;  
+                font-size: 23.6px;                
+                text-transform: uppercase;                  
+                border-width: 2px;
+                border-style: solid;                
                 border-image: url(../img/bg/header-border.png) 2 round;  
                 
                 @media (max-width: 1300px) {
@@ -195,6 +198,10 @@
 
                 @media (max-width: 520px) {
                     font-size: 15px;
+                }
+
+                @media (pointer: coarse) {
+                    padding-top: 0.2em;
                 }
             }
             
@@ -307,31 +314,28 @@
                 font-size: 16px;
             }
 
-            div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            &>div {        
+                display: flex; 
+                justify-content: center; 
+                align-items: center;      
                 width: 100%;
-                height: 100%;
+                height: 100%; 
+                padding-left: 0.5em;               
+                font-family: $bebas, serif;
+                font-weight: 700;
+                color: $white;
                 border-radius: 50%;
                 border: 2px dashed $white;
             }
 
-            p {           
-                padding-left: 0.4em;                                      
-                font-family: $bebas, serif;
-                font-weight: 700;                
-                color: $white;                
+            .price-big {
+                font-size: 2.295082em;
+            }
 
-                span:first-child {
-                    font-size: 2.295082em;                    
-                }
-                span:last-child {
-                    display: block;
-                    text-transform: uppercase;                    
-                    letter-spacing: 0.4em;
-                }
-            }            
+            .text {
+                text-transform: uppercase;
+                letter-spacing: 0.4em;
+            }                       
         }
     }
 }
