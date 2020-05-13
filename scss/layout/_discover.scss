@@ -5,28 +5,60 @@
     padding: 25px;
     box-shadow: 18.7px 24.8px 43px 0 rgba(0, 0, 0, 0.17);
 
+    @media (max-width: 1200px) {
+        margin-top: 50px;        
+    }
+
     &__description {        
         flex: 0 1 47%;
         padding: 38px 45px 32px 28px;
+
+        @media (max-width: 1200px) {
+            flex: 1 1 auto;
+            padding-bottom: 45%;
+            background: #040410 url(../img/imges/discover-1.jpg) 100% 100% / contain no-repeat;
+        }
 
         h2 {
             @extend %h2-standart-header;
             font-size: 29.2px;
             letter-spacing: 0.059931em;
             color: $greyish-brown;
+
+            @media (max-width: 1200px) {
+                color: $white;
+            }
         }
         h3 {
             @extend %h3-standart-header;
             margin-top: 4px;
             font-size: 41.7px;
+
+            @media (max-width: 1200px) {
+                color: $white;
+            }
         }
         p {           
             margin: 30px 0 50px 0;
             font-size: 20.8px;
             color: $greyish-brown;
-            line-height: 1.6;            
+            line-height: 1.6;    
+            
+            @media (max-width: 1200px) {
+                font-size: 16.7px;
+                color: $white-two;
+            }
         }
-    }    
+    } 
+    
+    &__image {
+        flex: 1 1 auto;
+        background: url(../img/imges/discover-1.jpg) 100% 0 / cover no-repeat;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
 }
 
 .dotts-pages {

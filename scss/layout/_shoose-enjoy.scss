@@ -8,18 +8,31 @@
         display: inline-block;
         padding: 14px 22px 12px 22px;       
         background-color: $butterscotch;
+
+        @media (max-width: 840px) {
+            font-size: 20px;
+        }
     }
 
     & > h3 {
         @extend %h3-standart-header;
         font-size: 50px;
-        margin-top: 40px;        
+        margin-top: 40px;   
+        
+        @media (max-width: 840px) {
+            padding: 0 20px;
+            font-size: 40px;
+        }
     }
 
     & > p {        
         margin-top: 20px;
         padding: 0 190px;
         line-height: 1.75;
+
+        @media (max-width: 1200px) {
+            padding: 0 8%;
+        }
     }
 
     &__burgers {        
@@ -27,14 +40,62 @@
         justify-content: space-between;
         margin: 65px 26px 0 26px;
 
+        @media (max-width: 850px) {
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
         &__card {   
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
 
+            @media (max-width: 1010px) {
+                flex: 0 1 30%;
+            }  
+            
+            @media (max-width: 850px) {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px;
+                box-shadow: 0 0 3px  #4e4e4e;
+            }
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                padding: 25px;
+            }
+
             &:nth-child(even) {
                 margin: 0 20px;
+
+                img {
+                    max-width: 88%;
+
+                    @media (max-width: 850px) {
+                        flex: 0 1 40%;
+                        margin-left: 7%;
+                    }
+                }
+
+                @media (max-width: 1010px) {
+                    margin: 0 5%;
+                }
+
+                @media (max-width: 850px) {
+                    margin: 20px 0;
+                }
+            }
+
+            .wrapper {
+                flex: 0 1 45%;
+            }
+
+            img {
+                @media (max-width: 850px) {
+                    flex: 0 1 50%;                    
+                }
             }
 
             h2 {
