@@ -5,10 +5,31 @@
     background-repeat: no-repeat;
     background-position: 0 0, 100% 100%;
 
+    @media (max-width: 800px) {
+        padding-top: 100px;
+    }
+
+    @media (max-width: 640px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 600px) {
+        padding-bottom: 200px;
+    }
+
+    @media (max-width: 440px) {
+        background-position: -80px 0, 150% 120%;
+    }
+
     &>h2 {
         @extend %h2-standart-header;
         font-size: 29.2px;
         letter-spacing: 0.059931em;
+
+        @media (max-width: 800px) {
+            margin-right: 20px;            
+            text-align: right;
+        }
     }
 
     &>h3 {
@@ -16,6 +37,20 @@
         margin-top: 15px;
         font-size: 50px;
         letter-spacing: 0.06em;
+
+        @media (max-width: 1050px) {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 800px) {
+            margin: 0 20px 0 auto;
+            text-align: right;
+        }
+
+        @media (max-width: 640px) {
+            max-width: 250px;
+        }
     }
 
     &__form {
@@ -23,13 +58,22 @@
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 784px;
-        margin: 85px auto 0 auto;       
+        margin: 85px auto 0 auto;      
+        
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         %form-element {
             flex: 0 1 48.341836%;
             border-radius: 5px;
             font-size: 20.8px;
             text-transform: uppercase;
+
+            @media (max-width: 600px) {
+                width: 85%;;
+            }
         }        
         
         input {
@@ -38,9 +82,13 @@
             font-family: $bebas, serif;           
             color: $greyish-brown;
             border: solid 1px $pinkish-grey;
+
+            @media (max-width: 600px) {
+                padding: 16px;
+            }
             
             &:not(:last-of-type) {
-                margin-bottom: 27px;
+                margin-bottom: 27px;                
             }
         }        
 
@@ -60,6 +108,12 @@
 
             &:active {
                 transform: scale(0.95);
+            }
+
+            @media (max-width: 600px) {
+                width: auto;                
+                margin-top: 70px;
+                padding: 25px;
             }
         }
     }
