@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__top-block">
             <div class="header__top-block__logo">
                 <a href="#">
@@ -33,10 +33,10 @@
         </div>        
         <nav id="menu" class="header__navigation">            
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Contact Us</a></li>                
+                <li><a href="#header">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#footer">Contact Us</a></li>                
             </ul>
         </nav>
         <div class="header__main-promo">
@@ -73,7 +73,7 @@
             <h3>Fresh & Chili</h3>            
         </div>
     </section>
-    <section class="shoose-enjoy">        
+    <section class="shoose-enjoy" id="menu">        
         <h2>Always Tasty Burger</h2>
         <h3>Choose & Enjoy</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>  
@@ -118,7 +118,7 @@
         <div class="discover__image">
         </div>        
     </section>
-    <section class="reservation">
+    <section class="reservation" id="reservation">
         <h2>Reservation</h2>
         <h3>Book your table</h3>
         <form action="#" class="reservation__form">
@@ -130,7 +130,7 @@
             <button type="submit">Find A Table</button>
         </form>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__logo">
             <img class="logoImg" src="./img/logo/footer.svg" alt="Burger House">
             <h2 class="logoHeader">Burger House</h2>            
