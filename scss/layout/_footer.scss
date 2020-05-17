@@ -12,6 +12,10 @@
 
         .logoImg {
             width: 90px;
+
+            @media (max-width: 580px) {
+                width: 63px;
+            }
         }
 
         .logoHeader {
@@ -21,6 +25,14 @@
             font-weight: 700;            
             font-size: 64px;
             text-transform: uppercase;
+
+            @media (max-width: 580px) {
+                font-size: 42px;
+            }
+
+            @media (max-width: 370px) {
+                margin-left: 25px;
+            }
         }        
     }
 
@@ -28,14 +40,32 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 960px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .info-descr {
             flex: 0 1 512px;
             margin-top: 45px;
             line-height: 1.5;
+
+            @media (max-width: 960px) {
+                flex: 0 1 auto;
+                max-width: 90%;
+            }
         }
 
         &__address {
-            padding: 64px 94px 0 20px;                  
+            padding: 64px 94px 0 20px;    
+            
+            @media (max-width: 1050px) {
+                padding-right: 20px;
+            }   
+            
+            @media (max-width: 600px) {
+                padding-left: 0;
+            }
 
             %address-link {
                 display: block;   
@@ -62,15 +92,29 @@
         justify-content: space-between;
         margin-top: 160px;
 
+        @media (max-width: 960px) {
+            flex-direction: column-reverse;
+            margin-top: 64px;
+        }
+
         .coopyright {
             font-family: $bebas ,serif;
-            text-transform: uppercase;
+            text-transform: uppercase;   
+            
+            @media (max-width: 960px) {
+                padding-top: 18px;
+                border-top: 2px solid $greyish-brown;
+            }
         }
 
         &__social {
             .icon-wrapper {
                 display: inline-block;
                 margin-left: 8px;
+
+                @media (max-width: 960px) {
+                    margin: 0 0 35px 0;
+                }
             }
             .icon-link {
                 display: block;
@@ -82,6 +126,11 @@
                 color: black;
                 border-radius: 50%;
                 transition: transform 0.5s;
+
+                @media (max-width: 960px) {
+                    margin-right: 25px;
+                    font-size: 20px;
+                }
 
                 @media (hover: hover) {
                     &:hover {
